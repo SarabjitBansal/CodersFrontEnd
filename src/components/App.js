@@ -128,7 +128,9 @@ class App extends Component {
       loading: true
     });
     console.log(this.state.user);
+    this.fetchHistoryMessages();
     this.createSocket();
+
   }
   componentDidMount = async () => {
     debugger
@@ -140,7 +142,7 @@ class App extends Component {
       loading: true
     });
 
-    await this.fetchHistoryMessages();
+     this.fetchHistoryMessages();
 
     await this.createSocket();
 
