@@ -132,7 +132,7 @@ class App extends Component {
     await this.fetchHistoryMessages();
 
     await this.createSocket();
-
+    this.renderChatLog();
     this.setState({
       loading: false
     });
