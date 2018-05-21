@@ -351,6 +351,8 @@ class App extends Component {
   };
 
   renderChatLog() {
+    debugger;
+    this.fetchHistoryMessages()
     console.log(this.state)
     return this.state.chatLogs.map((el, i) => {
       if(el.user_name === null){
@@ -399,9 +401,9 @@ class App extends Component {
             className="chat-input"
             autoFocus
           />
-          <button onClick={e => this.handleSendEvent(e)} className="send">
+          <RaisedButton onClick={e => this.handleSendEvent(e)} className="send">
             Send
-          </button>
+          </RaisedButton>
         </div>
         < Footer />
       </div>
