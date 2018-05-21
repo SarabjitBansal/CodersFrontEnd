@@ -140,7 +140,7 @@ class App extends Component {
   fetchHistoryMessages = () => {
     axios(
       {
-        url: 'http://localhost:3333/messages.json'
+        url: 'https://codersappserver.herokuapp.com/messages.json'
 
       }
     )
