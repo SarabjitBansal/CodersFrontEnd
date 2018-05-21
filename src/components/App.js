@@ -164,6 +164,7 @@ class App extends Component {
           chatLogs: res.data
         })
       })
+      this.renderChatLog();
   }
 
   createSocket = () => {
