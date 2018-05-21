@@ -203,9 +203,7 @@ class Signup extends Component {
         <p>{this.state.success}</p>
 
 
-        <Link to="/">
-          Back to home
-        </Link>
+    
         <Footer />
       </div>
     );

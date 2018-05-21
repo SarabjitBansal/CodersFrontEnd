@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import axios from "axios";
 
+import './Editprofile.css';
+import RaisedButton from "material-ui/RaisedButton";
 
 class ImageUpload extends Component {
 
@@ -89,9 +91,10 @@ class ImageUpload extends Component {
           <input className="fileInput"
             type="file" ref="file"
             onChange={(e)=>this._handleImageChange(e)} />
-          <button className="submitButton"
+          <RaisedButton className="submitButton"
             type="submit"
-            onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
+            primary={true}
+            onClick={(e)=>this._handleSubmit(e)}>Upload</RaisedButton>
         <div className="imgPreview">
           {$imagePreview}
         </div>

@@ -49,6 +49,7 @@
 .repos ul a {
   text-decoration: none;
   color:#5aa8b4;
+  font-family: 'Open Sans', sans-serif;
 }
 .repos ul a:hover {
 color:#dc442d;
@@ -60,8 +61,9 @@ color:#dc442d;
   list-style: none;
 
 }
-.Profiles p{
+.Profiles p {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 .Allprofiles {
   text-align: left;
@@ -69,6 +71,7 @@ color:#dc442d;
   width: 50%;
   vertical-align: top;
   display: inline-block;
+  font-family: 'Open Sans', sans-serif;
   /* display: inline; */
 }
 .searchInfo {
@@ -91,7 +94,7 @@ color:#dc442d;
   text-align: center;
   width: 40%;
   position: fixed;
-  height: 80vh;
+  height: 77vh;
   right: 0;
   margin-right: 20px;
   display: inline-block;
@@ -143,4 +146,59 @@ color:#dc442d;
 }
 .work {
   margin-right: 10px;
+}
+
+.disabled-link a {
+  color: grey;
+
+}
+
+.myProfile {
+  width: 100%;
+  padding-top: 70px;
+}
+.myProfile2 {
+  display: flex;
+}
+.myProfile1 {
+  width: 50%;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.secondDiv {
+  width:30%;
+  text-align: left;
+  padding-left: 60px;
+  /* vertical-align: center; */
+  vertical-align:middle;
+  position: relative;
+}
+.mysocialMedia {
+  width: 100px;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+
+  vertical-align: center;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+}
+
+.mysocialMedia a {
+  font-size: 22px;
+  text-decoration: none;
+
+  color:#5aa8b4;
+}
+.mysocialMedia a:hover {
+  color:#dc442d;
+}
+.disabled-link {
+  color: grey;
+   pointer-events: none;
 }

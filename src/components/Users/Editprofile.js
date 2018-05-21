@@ -7,10 +7,13 @@ import jwtDecoder from "jwt-decode";
 import TextField from "material-ui/TextField";
 import axios from "axios";
 import './Editprofile.css';
+import RaisedButton from "material-ui/RaisedButton";
 
 // uplod images
 
-
+const style = {
+  margin: 15
+};
 
 // upload images ends
 class Editprofile extends Component {
@@ -165,7 +168,7 @@ class Editprofile extends Component {
     }
     return (
       <div className="Editprofile">
-
+        <div className="EditprofileDiv">
         <form onSubmit={this._handleSubmit}>
           <div>
               <h1>Edit Profile</h1>
@@ -203,8 +206,8 @@ class Editprofile extends Component {
           <TextField
             id="description-field"
             type="description"
-            hintText="description"
-            floatingLabelText="description"
+            hintText="Fun facts about yourself"
+            floatingLabelText="About"
             multiLine={true}
             rows={2}
             rowsMax={4}
@@ -215,7 +218,7 @@ class Editprofile extends Component {
           <TextField
             id="keyskills-field"
             type="keyskills"
-            hintText="keyskills"
+            hintText="React,Rails"
             floatingLabelText="keyskills"
             defaultValue={this.state.user.keyskills}
             onChange={this._handleChange}
@@ -230,8 +233,8 @@ class Editprofile extends Component {
           <TextField
             id="githubu-field"
             type="githubu"
-            hintText="githubu"
-            floatingLabelText="githubu"
+            hintText="https://github.com/..."
+            floatingLabelText="GitHub Link"
             defaultValue={this.state.user.githubu}
             onChange={this._handleChange}
           />
@@ -239,8 +242,8 @@ class Editprofile extends Component {
           <TextField
             id="linkedinu-field"
             type="linkedinu"
-            hintText="linkedinu"
-            floatingLabelText="linkedinu"
+            hintText="https://www.linkedin.com/..."
+            floatingLabelText="Linkedin Link"
             defaultValue={this.state.user.linkedinu}
             onChange={this._handleChange}
           />
@@ -248,8 +251,8 @@ class Editprofile extends Component {
           <TextField
             id="insta-field"
             type="insta"
-            hintText="insta"
-            floatingLabelText="insta"
+            hintText="https://www.instagram.com/..."
+            floatingLabelText="Instagram Link"
             defaultValue={this.state.user.insta}
             onChange={this._handleChange}
           />
@@ -257,8 +260,8 @@ class Editprofile extends Component {
           <TextField
             id="twitteru-field"
             type="twitteru"
-            hintText="twitteru"
-            floatingLabelText="twitteru"
+            hintText="https://www.twitter.com/..."
+            floatingLabelText="Twitter Link"
             defaultValue={this.state.user.twitteru}
             onChange={this._handleChange}
           />
@@ -266,16 +269,22 @@ class Editprofile extends Component {
           <TextField
             id="location-field"
             type="location"
-            hintText="location"
-            floatingLabelText="location"
+            hintText="Sydney"
+            floatingLabelText="Location"
             defaultValue={this.state.user.location}
             onChange={this._handleChange}
           />
           <br /><br />
-          <input type="submit" value="Submit" />
+          <RaisedButton
+            label="Submit"
+            type="submit"
+            primary={true}
+            style={style}
+          />
         </form>
-        <p>{this.state.success}</p>
-
+        </div>
+        <br />
+        <br />
         <Footer />
       </div>
     );

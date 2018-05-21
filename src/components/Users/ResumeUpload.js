@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import RaisedButton from "material-ui/RaisedButton";
 import Iframe from 'react-iframe'
+import './Editprofile.css';
 
 class ResumeUpload extends Component {
 
@@ -91,7 +92,8 @@ class ResumeUpload extends Component {
             onChange={(e)=>this._handleImageChange(e)} />
           <RaisedButton className="submitButton"
             type="submit"
-            onClick={(e)=>this._handleSubmit(e)}>Upload Resume</RaisedButton>
+            primary={true}
+            onClick={(e)=>this._handleSubmit(e)}>Upload</RaisedButton>
         <div className="imgPreview">
           {$imagePreview}
         </div>

@@ -85,3 +85,7 @@ button.send {
   border-radius: 3px;
   margin-top: 20px;
 }
+
+.App h1 {
+  color: #E14D39;
+}

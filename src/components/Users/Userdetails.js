@@ -35,6 +35,7 @@ class Userdetails extends Component {
 
   componentDidMount() {
     debugger;
+  
     const username = this.props.location.state.githubu.split('/').pop(); //this.props.location.state.name; // Check React dev tools to see where this comes from.
     // let newnm = this.props.location.state.githubu
     // let nwus =  new RegExp('/\github.com\/(.*)/');
@@ -71,10 +72,35 @@ class Userdetails extends Component {
           <br />
         </div>
         <div className="socialMedia">
-          <div><a  href={ `${this.state.ulinkedinu}` }  target="_blank" className="fa fa-linkedin"><p>{this.state.ulinkedinu}</p></a></div>
-          <div><a  href={ `${this.state.utwitteru}` }  target="_blank" className="fa fa fa-twitter"><p>{this.state.ulinkedinu}</p></a></div>
-          <div><a  href={ `${this.state.uinstau}` }  target="_blank" className="fa fa fa-instagram"><p>{this.state.ulinkedinu}</p></a></div>
-          <div><a  href={ `${this.state.ugithubu}` }  target="_blank" className="fa fa fa-github"><p>{this.state.ulinkedinu}</p></a></div>
+
+        {(this.state.ulinkedinu) ?
+          <div><a  href={ `${this.state.ulinkedinu}` }  target="_blank" className="fa fa-linkedin"></a></div>
+        :
+
+        <div><a  href='#'  target="_blank" className="fa fa-linkedin disabled-link"></a></div>
+
+       }
+        {(this.state.utwitteru) ?
+          <div><a  href={ `${this.state.utwitteru}` }  target="_blank" className="fa fa fa-twitter"></a></div>
+        :
+
+        <div><a  href='#'  target="_blank" className="fa fa fa-twitter disabled-link"></a></div>
+
+       }
+        {(this.state.uinstau) ?
+          <div><a  href={ `${this.state.uinstau}` }  target="_blank" className="fa fa fa-instagram"></a></div>
+        :
+
+        <div><a  href='#'  target="_blank" className="fa fa fa-instagram disabled-link"></a></div>
+
+       }
+        {(this.state.ugithubu) ?
+          <div><a  href={ `${this.state.ugithubu}` }  target="_blank" className="fa fa fa-github"></a></div>
+        :
+
+        <div><a  href='#'  target="_blank" className="fa fa fa-github disabled-link"></a></div>
+
+       }
         </div>
       </div>
       <div className="gitDetails">

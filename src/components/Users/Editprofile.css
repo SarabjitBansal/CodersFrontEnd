@@ -1,5 +1,9 @@
-h3{
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+
+h3 {
   margin-left: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .previewComponent {
@@ -69,4 +73,20 @@ div.addImage:first-of-type{
 }
 .ppic {
   height: 20px;
+}
+.Editprofile {
+  width: 100%;
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+.EditprofileDiv h1 {
+  color: #E14D39;
+
+}
+.EditprofileDiv {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+
 }
