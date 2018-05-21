@@ -26,7 +26,7 @@ const muiTheme = getMuiTheme({
 const token = localStorage.getItem('jwtToken');
 
 console.log("Token is at Routes",token);
-debugger;
+// debugger;
 const Routes =()=> (
 
   <MuiThemeProvider muiTheme={getMuiTheme(muiTheme)}>
