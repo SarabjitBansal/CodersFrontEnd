@@ -114,18 +114,20 @@ class App extends Component {
     this.state = {
       currentChatMessage: "",
       chatLogs: [],
-      user: null,
+      user: {},
       loading: false
     };
   }
   componentWillMount() {
+    debugger;
     const user = jwtDecoder(localStorage.getItem('jwtToken'));
     // const user = await jwtDecoder(this.props.token);
     console.log('CHAT USER',user);
-    await this.setState({
-      user,
+     this.setState({
+      user:user,
       loading: true
     });
+    console.log(this.state.user);
     this.createSocket();
   }
   componentDidMount = async () => {
@@ -134,7 +136,7 @@ class App extends Component {
     // const user = await jwtDecoder(this.props.token);
     console.log('CHAT USER',user);
     await this.setState({
-      user,
+      user:user,
       loading: true
     });
 
