@@ -118,10 +118,12 @@ class App extends Component {
       loading: false
     };
   }
-
+  componentWillMount() {
+    this.createSocket();
+  }
   componentDidMount = async () => {
     debugger
-    const user = await jwtDecoder(localStorage.getItem('jwtToken'));
+    const user = jwtDecoder(localStorage.getItem('jwtToken'));
     // const user = await jwtDecoder(this.props.token);
     console.log('CHAT USER',user);
     await this.setState({
