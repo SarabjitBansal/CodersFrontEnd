@@ -123,7 +123,7 @@ class Signup extends Component {
   };
 
   handleClick = () => {
-    let url = "http://localhost:3333/users.json";
+    let url = "https://codersappserver.herokuapp.com/users.json";
 
     let postData = {
       email: this.state.email,
@@ -143,7 +143,7 @@ class Signup extends Component {
       .then(() => {
         this.setState({ success: "Success your account was created!" });
         axios({
-          url: "http://localhost:3333/user_token",
+          url: "https://codersappserver.herokuapp.com/user_token",
           method: "post",
           data: {
             auth: {

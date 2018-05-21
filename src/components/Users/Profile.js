@@ -25,7 +25,7 @@ class Profile extends Component {
     const user = jwtDecoder(this.props.token);
 
     axios({
-      url: `http://localhost:3333/users/${user.sub}.json`,
+      url: `https://codersappserver.herokuapp.com/users/${user.sub}.json`,
       method: "get",
       headers: {
         authorization: `Bearer {this.props.token}`

@@ -122,7 +122,7 @@ class Login extends Component {
   }
 
   handleClick = () => {
-    let url = "http://localhost:3333/user_token";
+    let url = "https://codersappserver.herokuapp.com/user_token";
 
     let postData = {
           auth: {

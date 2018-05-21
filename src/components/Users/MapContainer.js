@@ -44,14 +44,14 @@ export class MapContainer extends PureComponent {
   	});
   }
   fetchuser() {
-    let url1= 'http://localhost:3333/users.json';
+    let url1= 'https://codersappserver.herokuapp.com/users.json';
     if(this.props.locsearch) {
       // debugger;
         let k = this.props.locsearch
-       url1= `http://localhost:3333/users/search/${k}.json`;
+       url1= `https://codersappserver.herokuapp.com/users/search/${k}.json`;
     }
     else {
-       url1= 'http://localhost:3333/users.json';
+       url1= 'https://codersappserver.herokuapp.com/users.json';
       }
     axios
         .get(url1, {

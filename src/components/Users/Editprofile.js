@@ -43,7 +43,7 @@ class Editprofile extends Component {
     event.preventDefault();
         const user = jwtDecoder(this.props.token);
 
-        let url = `http://localhost:3333/users/${user.sub}.json`;
+        let url = `https://codersappserver.herokuapp.com/users/${user.sub}.json`;
         console.log("This url with user .sub is ",url);
           debugger;
         axios({
@@ -138,7 +138,7 @@ class Editprofile extends Component {
       const user = jwtDecoder(this.props.token);
       console.log("user inn Edit profile",user);
       axios({
-        url: `http://localhost:3333/users/${user.sub}.json`,
+        url: `https://codersappserver.herokuapp.com/users/${user.sub}.json`,
         method: "get",
         headers: {
           authorization: `Bearer ${this.props.token}`

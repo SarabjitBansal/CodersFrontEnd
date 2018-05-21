@@ -101,14 +101,14 @@ class Allprofiles extends PureComponent {
   }
 // serch functonality ends
   fetchUsers = () => {
-    let url1= 'http://localhost:3333/users.json';
+    let url1= 'https://codersappserver.herokuapp.com/users.json';
     if(this.state.locsearch) {
       // debugger;
         let k = this.state.locsearch
-       url1= `http://localhost:3333/users/search/${k}.json`;
+       url1= `https://codersappserver.herokuapp.com/users/search/${k}.json`;
     }
     else {
-       url1= 'http://localhost:3333/users.json';
+       url1= 'https://codersappserver.herokuapp.com/users.json';
       }
 
 

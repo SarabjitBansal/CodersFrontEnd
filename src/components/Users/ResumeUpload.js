@@ -25,7 +25,7 @@ class ResumeUpload extends Component {
     debugger;
 
 
-    let url = `http://localhost:3333/users/${this.props.user.id}.json`;
+    let url = `https://codersappserver.herokuapp.com/users/${this.props.user.id}.json`;
     console.log(url);
       debugger;
     axios({
