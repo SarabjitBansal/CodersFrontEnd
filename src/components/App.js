@@ -157,7 +157,7 @@ class App extends Component {
     const user_name = this.state.user.name;
     const user_id = this.state.user.sub;
     console.log(user_id, user_name);
-    let cable = Cable.createConsumer("ws://localhost:3333/cable");
+    let cable = Cable.createConsumer("ws://codersappserver.herokuapp.com/cable");
     this.chats = cable.subscriptions.create(
       {
         channel: `MessagesChannel`
