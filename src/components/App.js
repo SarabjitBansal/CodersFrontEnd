@@ -119,7 +119,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount = async () => {
+  componentWillMount = async () => {
     debugger
     // const user = jwtDecoder(localStorage.getItem('jwtToken'));
     const user = await jwtDecoder(this.props.token);
@@ -132,7 +132,7 @@ class App extends Component {
     await this.fetchHistoryMessages();
 
     await this.createSocket();
-    this.renderChatLog();
+
     this.setState({
       loading: false
     });
