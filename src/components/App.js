@@ -325,14 +325,12 @@ class App extends Component {
 
   createSocket = () => {
     const user_name = this.state.user.name;
-    const concert = this.state.concert;
     const user_id = this.state.user.sub;
 
     let cable = Cable.createConsumer("wss://codersappserver.herokuapp.com/cable");
     this.chats = cable.subscriptions.create(
       {
-        channel: `MessagesChannel`,
-        event_id: this.state.concert.id
+        channel: `MessagesChannel`
       },
       {
         connected: () => {},
