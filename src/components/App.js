@@ -401,7 +401,7 @@ class App extends Component {
             className="chat-input"
             autoFocus
           />
-          <RaisedButton onClick={e => this.handleSendEvent(e)} className="send">
+          <RaisedButton onClick={e => this.handleSendEvent(e)} primary={true} className="send">
             Send
           </RaisedButton>
         </div>
