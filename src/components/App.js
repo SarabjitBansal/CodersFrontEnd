@@ -369,8 +369,7 @@ class App extends Component {
       else{
         return (
           <li key={`chat_${i}`}>
-            <span className="chat-message">{el.user_name}</span>
-            <span className="chat-message">{el.content}</span>
+            <span className="chat-message"><strong>{el.user_name}:</strong> {el.content}</span>
             <span className="chat-created_at">{moment(el.created_at).format(
               "h:mm:ss a"
             )}</span>
