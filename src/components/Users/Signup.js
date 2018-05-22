@@ -124,7 +124,7 @@ class Signup extends Component {
 
   handleClick = () => {
     let url = "https://codersappserver.herokuapp.com/users.json";
-
+debugger;
     let postData = {
       email: this.state.email,
       password: this.state.password,
@@ -152,6 +152,7 @@ class Signup extends Component {
             }
           }
         }).then( (res) => {
+
            localStorage.setItem("jwtToken", res.jwt);
           this.props.history.push("/editprofile");
         });
@@ -203,7 +204,7 @@ class Signup extends Component {
         <p>{this.state.success}</p>
 
 
-    
+
         <Footer />
       </div>
     );

@@ -44,6 +44,7 @@ class Editprofile extends Component {
     };
   _handleSubmit(event) {
     event.preventDefault();
+      debugger;
         var user = jwtDecoder(this.props.token);
         console.log(user);
         user = jwtDecoder(localStorage.getItem('jwtToken'));
@@ -140,6 +141,7 @@ class Editprofile extends Component {
 
 
     fetchUser = () => {
+      debugger;
       var user = jwtDecoder(this.props.token);
       console.log("user inn Edit profile",user);
        user = jwtDecoder(localStorage.getItem('jwtToken'));
