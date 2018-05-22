@@ -164,9 +164,7 @@ class Allprofiles extends PureComponent {
     return (
       <div className="AllprofilesTop">
 
-      <div className="AllprofilesTopBanner">
-      <p>Looking for coders?</p>
-      </div>
+
 
 
         <div className="Allprofilespage">
