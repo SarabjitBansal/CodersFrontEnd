@@ -387,8 +387,9 @@ class App extends Component {
 
     return (
       <div className="App">
+      <div className="App1">
+      <div className="myappBanner"><p>CHAT</p></div>
         <div className="stage">
-          <h1>Chat</h1>
           <div className="chatBox">
             <ul className="chat-logs">{this.renderChatLog()}</ul>
           </div>
@@ -401,10 +402,10 @@ class App extends Component {
             className="chat-input"
             autoFocus
           />
-          <RaisedButton onClick={e => this.handleSendEvent(e)} primary={true} className="send">
-            Send
+          <RaisedButton onClick={e => this.handleSendEvent(e)} primary={true} className="send" label="Send">
           </RaisedButton>
         </div>
+      </div>
         < Footer />
       </div>
     );

@@ -33,16 +33,14 @@ class Home extends Component {
         <div id="secmainDiv">
           <div id="secmainDiv1">
             <div id="div4">
-            <p>
-            Fed up of putting everything into a job application, getting your hopes up and never hearing anything back?
-            Or are you an employer with mountains of CVs and portfolios to get through on top of the rest of your workload?
-            Pick Me is a concept for an app which simplifies the application process in the creative industry, for both the applicant and the employer.
-            </p>
-            <p>
-            Fed up of putting everything into a job application, getting your hopes up and never hearing anything back?
-            Or are you an employer with mountains of CVs and portfolios to get through on top of the rest of your workload?
-            Pick Me is a concept for an app which simplifies the application process in the creative industry, for both the applicant and the employer.
-            </p>
+
+
+
+            <h3>DESIGN - BUILD - PROBLEM SOLVE </h3>
+            <p>- Our app developers will walk you through the steps to bring your product to life. We will ensure your project has a roadmap that is clear, actionable, and within your budget. We will advise you on the best language and technology stack for your product depending on your requirements. </p>
+
+            <p>- Is your project not going as planned? Do you need to work faster, improve quality, or find a better process? We bring years’ worth of experience from building hundreds of projects to your doorstep. we’ll take your product to the next level.</p>
+
             </div>
             <div id="div5"></div>
           </div>

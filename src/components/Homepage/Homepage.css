@@ -138,6 +138,9 @@
   width: 35em;
 
 }
+#div4 p{
+  text-align: left;
+}
 #div5 {
   height: 20em;
   width: 30em;
