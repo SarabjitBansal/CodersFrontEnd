@@ -141,15 +141,17 @@ class Signup extends Component {
     axios
       .post(url, postData, axiosConfig)
       .then(() => {
-
-      axios.post('https://codersappserver.herokuapp.com/user_token', {
-        data: {
-          auth: {
-            email: this.state.email,
-            password: this.state.password
+        
+        axios({
+          url: "https://codersappserver.herokuapp.com/user_token",
+          method: "post",
+          data: {
+            auth: {
+              email: this.state.email,
+              password: this.state.password
+            }
           }
-        }
-      }).then( (res) => {
+        }).then( (res) => {
 
            localStorage.setItem("jwtToken", res.jwt);
           this.props.history.push("/editprofile");
