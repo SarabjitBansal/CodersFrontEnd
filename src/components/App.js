@@ -101,13 +101,13 @@ import Cable from "actioncable";
 import jwtDecoder from "jwt-decode";
 // import "./Chatroom.css";
 import axios from 'axios';
-import './App.css';
+
 import moment from "moment";
 import Footer from "./Footer/Footer";
 import _ from "lodash";
 import RaisedButton from "material-ui/RaisedButton";
-
-
+import './App.css';
+import './Header/Header.css';
 // class App extends Component {
 //   constructor(props) {
 //     super(props);
@@ -351,7 +351,7 @@ class App extends Component {
   };
 
   renderChatLog() {
-    debugger;
+    // debugger;
     this.fetchHistoryMessages()
     console.log(this.state)
     return this.state.chatLogs.map((el, i) => {
@@ -385,9 +385,11 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-      <div className="App1">
+      <div className="Appp">
       <div className="myappBanner"><p>CHAT</p></div>
+      <div className="App1">
+
+      </div>
         <div className="stage">
           <div className="chatBox">
             <ul className="chat-logs">{this.renderChatLog()}</ul>
@@ -403,10 +405,11 @@ class App extends Component {
           />
           <RaisedButton onClick={e => this.handleSendEvent(e)} primary={true} className="send" label="Send">
           </RaisedButton>
-        </div>
+
       </div>
-        < Footer />
+      < Footer />
       </div>
+
     );
   }
 
