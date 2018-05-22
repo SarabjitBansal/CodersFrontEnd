@@ -94,7 +94,7 @@ class ImageUpload extends Component {
           <RaisedButton className="submitButton"
             type="submit"
             primary={true}
-            onClick={(e)=>this._handleSubmit(e)}>Upload</RaisedButton>
+            onClick={(e)=>this._handleSubmit(e)} label="Upload"></RaisedButton>
         <div className="imgPreview">
           {$imagePreview}
         </div>

@@ -1,6 +1,6 @@
 .footer {
   text-align: center;
-  background-color: #5DA8B3;
+  background-color: #000;
   padding: 10px;
   width: 100%;
   color:white;
@@ -10,6 +10,6 @@
   height:100%;
 
 margin-top: 5em;
-color: #333333;
+color: white;
 
 }

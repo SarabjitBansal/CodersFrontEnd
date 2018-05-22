@@ -26,8 +26,8 @@ class Allprofiles extends PureComponent {
   super(props);
   this.state = {
     allusers: null,
-    height: 20,
-    width:20,
+    height: 40,
+    width:40,
     locsearch:'',
     lat: -33.8688197,
     lng:151.20929550000005
@@ -164,7 +164,9 @@ class Allprofiles extends PureComponent {
     return (
       <div className="AllprofilesTop">
 
-
+      <div className="AllprofilesTopBanner">
+      <p>Looking for coders?</p>
+      </div>
 
 
         <div className="Allprofilespage">
@@ -177,7 +179,7 @@ class Allprofiles extends PureComponent {
              type="location"
              hintText="Sydney"
              onChange={this._handleChangeloc}
-             floatingLabelText="Location"/>
+             floatingLabelText="Look for Coders Nearby.."/>
 
              <RaisedButton
               className="searchLoc"
@@ -191,22 +193,60 @@ class Allprofiles extends PureComponent {
           { this.state.allusers.map( user =>
 
             <div key={user.id}>
-            <img src={ user.image } alt={ user.name } height={ this.state.height }  width={ this.state.width }/>
+            <div id="userDet">
+              <img src={ user.image } alt={ user.name } />
 
-            <p><strong>{user.name}</strong></p>
-
+              <p><strong>{user.name}</strong></p>
+            </div>
+            <div className="descUser">
               <p className="block-with-text" ><strong>About:</strong> {user.description}</p>
-
+            </div>
             <p><strong>Key skills:</strong> {user.keyskills}</p>
 
+
+            <div className="secondDiv1">
+            <div className="mysocialMedia1">
+
+              {(user.linkedinu) ?
+                <div><a  href={ `${user.linkedinu}` }  target="_blank" className="fa fa-linkedin"></a></div>
+              :
+
+              <div><a  href='#'  target="_blank" className="fa fa-linkedin disabled-link"></a></div>
+
+             }
+              {(user.twitteru) ?
+                <div><a  href={ `${user.twitteru}` }  target="_blank" className="fa fa fa-twitter"></a></div>
+              :
+
+              <div><a  href='#'  target="_blank" className="fa fa fa-twitter disabled-link"></a></div>
+
+             }
+              {(user.instau) ?
+                <div><a  href={ `${user.instau}` }  target="_blank" className="fa fa fa-instagram"></a></div>
+              :
+
+              <div><a  href='#'  target="_blank" className="fa fa fa-instagram disabled-link"></a></div>
+
+             }
+              {(user.githubu) ?
+                <div><a  href={ `${user.githubu}` }  target="_blank" className="fa fa fa-github"></a></div>
+              :
+
+              <div><a  href='#'  target="_blank" className="fa fa fa-github disabled-link"></a></div>
+
+              }
+            </div>
+            <br />
             <br />
 
 
-            {<a onClick = {() => this._handleClick(user)} value ={user} href={`/userdetails/${user.id}`} ><RaisedButton primary={true} className="work" label ="My Work"></RaisedButton></a>}
+            </div>
+
+            {<a onClick = {() => this._handleClick(user)} value ={user} href={`/userdetails/${user.id}`} ><RaisedButton primary={true} className="work" label ="More Info"></RaisedButton></a>}
             {<a onClick = {() => this._handleClick2(user)} value ={user} href={`/chat`} ><RaisedButton primary={true} className="chat" label="Chat"></RaisedButton></a>}
               <br />
                 <br />
-            <hr />
+              <hr />
             <br />
 
             </div>

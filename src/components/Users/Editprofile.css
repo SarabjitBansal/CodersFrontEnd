@@ -74,11 +74,39 @@ div.addImage:first-of-type{
 .ppic {
   height: 20px;
 }
+.Editprofilemain {
+  margin-top: 20px;
+
+}
 .Editprofile {
   width: 100%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
 }
+.EditprofileBanner {
+  display: flex;
+  justify-content: center;
+  background-image: url('../images/Profile2.jpg');
+  background-repeat:no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 370px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.EditprofileBanner p{
+
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  /* text-shadow: 2px 2px #ccc; */
+
+}
+
 .EditprofileDiv h1 {
   color: #E14D39;
 
@@ -86,7 +114,7 @@ div.addImage:first-of-type{
 .EditprofileDiv {
   width: 60%;
   margin: 0 auto;
-  border: 1px solid grey;
+
   border-radius: 10px;
 
 }

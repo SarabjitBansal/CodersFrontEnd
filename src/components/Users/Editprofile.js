@@ -174,11 +174,13 @@ class Editprofile extends Component {
       return null;
     }
     return (
+      <div className="Editprofilemain">
+      <div className="EditprofileBanner"><p>EDIT PROFILE</p></div>
       <div className="Editprofile">
         <div className="EditprofileDiv">
         <form onSubmit={this._handleSubmit}>
           <div>
-              <h1>Edit Profile</h1>
+
             </div>
           <TextField
             id="name-field"
@@ -292,6 +294,7 @@ class Editprofile extends Component {
         </div>
         <br />
         <br />
+        </div>
         <Footer />
       </div>
     );

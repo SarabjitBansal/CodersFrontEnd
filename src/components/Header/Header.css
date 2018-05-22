@@ -5,11 +5,13 @@
 font-family: 'Open Sans', sans-serif;
 }
 header {
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar  {
-  width: 100%;
+  width: 80%;
   font-size: 20px;
   z-index: 1;
   text-align: left;
@@ -37,10 +39,15 @@ header {
 
 }
 
-.LoginDet {
-  position: absolute;
-  right: 20px;
+.LoginDet1 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 
+
+}
+.LoginDet {
+  text-align: right;
 
 }
 .LoginDet a {

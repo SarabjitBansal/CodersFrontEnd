@@ -35,7 +35,7 @@ class Userdetails extends Component {
 
   componentDidMount() {
     debugger;
-  
+
     const username = this.props.location.state.githubu.split('/').pop(); //this.props.location.state.name; // Check React dev tools to see where this comes from.
     // let newnm = this.props.location.state.githubu
     // let nwus =  new RegExp('/\github.com\/(.*)/');
@@ -61,11 +61,17 @@ class Userdetails extends Component {
 
 
     return (
-      <div className="Profiles">
+      <div className="profileMain">
+      <div className="profilesBanner"><p>{this.state.uname} Profile</p></div>
+      <div className="Profiles11">
+      <div className="sProfiles">
       <div className="userDetails">
+
         <div key={this.state.uid}>
+        <div className="UDET">
           <img src={ this.state.uimage } alt={ this.state.uname } height={ this.state.height }  width={ this.state.width }/>
-          <p>{this.state.name}</p>
+          <p>{this.state.uname}</p>
+        </div>
           <p><strong>About: </strong> {this.state.udescription}</p>
           <p><strong>Keyskills: </strong>{this.state.ukeyskills}</p>
           <p><strong>Location: </strong>{this.props.location.state.location}</p>
@@ -112,7 +118,8 @@ class Userdetails extends Component {
 
 
 
-
+      </div>
+    </div>
      <Footer />
       </div>
     );

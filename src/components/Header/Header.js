@@ -30,21 +30,23 @@ class Home extends Component {
 
           <Link to = "/" className ="navBarTop">Home</Link>
           <Link to = '/allprofiles' className="navBarTop">Profiles</Link>
-
-          { window.localStorage.jwtToken ? (
-            <div className="LoginDet">
-              <Link to = "/profile">My Profile</Link>
-              <Link to="/">
-                <a className = "signOutBtn" onClick={this._signOut}>Sign out</a>
-              </Link>
-            </div>
-              ):(
-              <div className="LoginDet">
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/login">Login</Link>
+          <div className="LoginDet1">
+          <div className="LoginDet">
+            { window.localStorage.jwtToken ? (
+              <div>
+                <Link to = "/profile">My Profile</Link>
+                <Link to="/">
+                  <a className = "signOutBtn" onClick={this._signOut}>Sign out</a>
+                </Link>
               </div>
-            )}
-
+                ):(
+                <div>
+                  <Link to="/signup">Sign Up</Link>
+                  <Link to="/login">Login</Link>
+                </div>
+              )}
+            </div>
+            </div>
         </nav>
       </header>
     );

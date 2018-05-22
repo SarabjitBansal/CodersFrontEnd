@@ -46,15 +46,54 @@ class Profile extends Component {
     }
     return (
       <div className="myProfile" key={this.state.user.id}>
+      <div className="myProfileBanner"><p>My Profile</p></div>
+      <div className="myProfilemain">
       <div className ="myProfile2">
       <div className="myProfile1">
-        <img src={ this.state.user.image } alt={ this.state.user.name } height={ this.state.height }  width={ this.state.width }/>
-        <p>{this.state.user.name}</p>
+      <div className="UDET">
+          <img src={ this.state.user.image } alt={ this.state.user.name }/>
+          <p>{this.state.user.name}</p>
+      </div>
         <p><strong>About: </strong> {this.state.user.description}</p>
         <p><strong>Keyskills: </strong>{this.state.user.keyskills}</p>
         <p><strong>Location: </strong>{this.state.user.location}</p>
+        <div className="secondDiv">
+          <div className="mysocialMedia">
+
+            {(this.state.ulinkedinu) ?
+              <div><a  href={ `${this.state.ulinkedinu}` }  target="_blank" className="fa fa-linkedin"></a></div>
+            :
+
+            <div><a  href='#'  target="_blank" className="fa fa-linkedin disabled-link"></a></div>
+
+           }
+            {(this.state.utwitteru) ?
+              <div><a  href={ `${this.state.utwitteru}` }  target="_blank" className="fa fa fa-twitter"></a></div>
+            :
+
+            <div><a  href='#'  target="_blank" className="fa fa fa-twitter disabled-link"></a></div>
+
+           }
+            {(this.state.uinstau) ?
+              <div><a  href={ `${this.state.uinstau}` }  target="_blank" className="fa fa fa-instagram"></a></div>
+            :
+
+            <div><a  href='#'  target="_blank" className="fa fa fa-instagram disabled-link"></a></div>
+
+           }
+            {(this.state.ugithubu) ?
+              <div><a  href={ `${this.state.ugithubu}` }  target="_blank" className="fa fa fa-github"></a></div>
+            :
+
+            <div><a  href='#'  target="_blank" className="fa fa fa-github disabled-link"></a></div>
+
+            }
+          </div>
+        </div>
+        <br />
+        <br />
         <Link to="/editprofile">
-        <RaisedButton primary={true}>Edit Profile</RaisedButton>
+        <RaisedButton primary={true} label="Edit Profile"></RaisedButton>
         </Link>
         <br />
         <br />
@@ -65,47 +104,18 @@ class Profile extends Component {
 
 
 
-      <div className="secondDiv">
-      <div className="mysocialMedia">
 
-        {(this.state.ulinkedinu) ?
-          <div><a  href={ `${this.state.ulinkedinu}` }  target="_blank" className="fa fa-linkedin"></a></div>
-        :
 
-        <div><a  href='#'  target="_blank" className="fa fa-linkedin disabled-link"></a></div>
-
-       }
-        {(this.state.utwitteru) ?
-          <div><a  href={ `${this.state.utwitteru}` }  target="_blank" className="fa fa fa-twitter"></a></div>
-        :
-
-        <div><a  href='#'  target="_blank" className="fa fa fa-twitter disabled-link"></a></div>
-
-       }
-        {(this.state.uinstau) ?
-          <div><a  href={ `${this.state.uinstau}` }  target="_blank" className="fa fa fa-instagram"></a></div>
-        :
-
-        <div><a  href='#'  target="_blank" className="fa fa fa-instagram disabled-link"></a></div>
-
-       }
-        {(this.state.ugithubu) ?
-          <div><a  href={ `${this.state.ugithubu}` }  target="_blank" className="fa fa fa-github"></a></div>
-        :
-
-        <div><a  href='#'  target="_blank" className="fa fa fa-github disabled-link"></a></div>
-
-        }
-      </div>
       <br />
       <br />
 
 
-      </div>
+
       <br />
 
 
       <br/><br/>
+      </div>
       </div>
        <Footer />
       </div>
