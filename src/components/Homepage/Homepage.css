@@ -10,7 +10,7 @@
 #banner {
   background-image: url('../images/2.jpg');
   background-repeat:no-repeat;
-  background-size: contain;
+  background-size: cover;
   /* background-size:stretch; */
   margin-top: 20px;
   width: 100%;
@@ -18,7 +18,7 @@
   display: flex;
   /* text-align: right; */
   /* justify-content: flex-end; */
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: flex-end;
 

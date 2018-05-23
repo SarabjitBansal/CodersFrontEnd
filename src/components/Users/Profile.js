@@ -50,7 +50,7 @@ class Profile extends Component {
       <div className="myProfilemain">
       <div className ="myProfile2">
       <div className="myProfile1">
-      <div className="UDET">
+      <div className="UDET1">
           <img src={ this.state.user.image } alt={ this.state.user.name }/>
           <p>{this.state.user.name}</p>
       </div>

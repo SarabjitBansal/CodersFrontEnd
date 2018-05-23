@@ -64,6 +64,22 @@
   padding-left: 10px;
   font-size: 22px;
 }
+
+.UDET1 {
+  display: inline-block;
+}
+.UDET1 img {
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+}
+.UDET1 p {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 22px;
+}
+
 .socialMedia {
   width:30%;
   display: inline-block;
@@ -203,7 +219,7 @@ color:#dc442d;
   justify-content: center;
   background-image: url('../images/Profile3.jpg');
   background-repeat:no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 370px;
   justify-content: center;
@@ -351,7 +367,7 @@ color:#dc442d;
 .profilesBanner {
   background-image: url('../images/Profile2.jpg');
   background-repeat:no-repeat;
-  background-size: contain;
+  background-size: cover;
   /* background-size:stretch; */
   margin-top: 20px;
   width: 100%;

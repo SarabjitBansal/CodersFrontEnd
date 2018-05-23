@@ -47,7 +47,7 @@ div.stage {
   justify-content: center;
   background-image: url('../components/images/Profile4.jpg');
   background-repeat:no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 370px;
   justify-content: center;
