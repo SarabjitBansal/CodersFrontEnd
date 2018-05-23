@@ -44,14 +44,14 @@ class Editprofile extends Component {
     };
   _handleSubmit(event) {
     event.preventDefault();
-      debugger;
+      // debugger;
         var user = jwtDecoder(this.props.token);
         console.log(user);
         user = jwtDecoder(localStorage.getItem('jwtToken'));
         console.log(user);
         let url = `https://codersappserver.herokuapp.com/users/${user.sub}.json`;
         console.log("This url with user .sub is ",url);
-          debugger;
+          // debugger;
         axios({
           url: url,
           method: "patch",
@@ -141,7 +141,7 @@ class Editprofile extends Component {
 
 
     fetchUser = () => {
-      debugger;
+      // debugger;
       var user = jwtDecoder(this.props.token);
       console.log("user inn Edit profile",user);
        user = jwtDecoder(localStorage.getItem('jwtToken'));
@@ -169,7 +169,7 @@ class Editprofile extends Component {
     };
 
   render() {
-    debugger;
+    // debugger;
     if (!this.state.user) {
       return null;
     }

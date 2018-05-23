@@ -24,12 +24,12 @@ class ImageUpload extends Component {
     console.log("Filename",files);
     data.append("image", files);
     console.log("data",data);
-    debugger;
+    // debugger;
 
 
     let url = `https://codersappserver.herokuapp.com/users/${this.props.user.id}.json`;
     console.log(url);
-      debugger;
+      // debugger;
     axios({
       url: url,
       method: "patch",

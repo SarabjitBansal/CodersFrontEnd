@@ -16,19 +16,19 @@ class ResumeUpload extends Component {
     // TODO: do something with -> this.state.file
     console.log('handle uploading-', this.state.file);
     // save file to database with ajax connection
-    debugger;
+    // debugger;
     let files = this.refs.file.files[0]; //this.state.file; //.name
     let data = new FormData();
     console.log("data",data);
     console.log("Filename",files);
     data.append("resumeu", files);
     console.log("data",data);
-    debugger;
+    // debugger;
 
 
     let url = `https://codersappserver.herokuapp.com/users/${this.props.user.id}.json`;
     console.log(url);
-      debugger;
+      // debugger;
     axios({
       url: url,
       method: "patch",
@@ -72,7 +72,7 @@ class ResumeUpload extends Component {
   }
 
   render() {
-    debugger;
+    // debugger;
     let {imagePreviewUrl} = this.state;
     let $imagePreview = null;
     // if (this.props.user.image) {

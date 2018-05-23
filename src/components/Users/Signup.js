@@ -124,7 +124,7 @@ class Signup extends Component {
 
   handleClick = () => {
     let url = "https://codersappserver.herokuapp.com/users.json";
-debugger;
+// debugger;
     let postData = {
       email: this.state.email,
       password: this.state.password,

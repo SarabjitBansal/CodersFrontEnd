@@ -34,7 +34,7 @@ class Userdetails extends Component {
   };
 
   componentDidMount() {
-    debugger;
+    // debugger;
 
     const username = this.props.location.state.githubu.split('/').pop(); //this.props.location.state.name; // Check React dev tools to see where this comes from.
     // let newnm = this.props.location.state.githubu
